@@ -1,24 +1,10 @@
-# README
+# Sasebo Code Club
+http://sasebo-code-club.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The official website of the Sasebo Code Club. This site is a learning platform to introduce our club members to open source contributions. This site is developed by
+new programmers for new programmers.
 
-Things you may want to cover:
+Our club meets every Thursday morning from 0930 - 1130 at the Sasebo, Japan USO in Nimitz Park. Please come join us!
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## How do I contribute?
+This application is for new programmers to learn web development. If you are a new programmer and would like to practice open source contribution, please read through our issues and submit a pull request.
