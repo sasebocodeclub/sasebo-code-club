@@ -2,7 +2,7 @@
   <div class="col-md-8">
     <h1><%= @post.title %></h1>
     <p><%= @post.created_at.strftime('%B %d, %Y') %> by <%= @post.author %></p>
-    <p><%= @post.body %></p>
+    <p><%= raw @post.body %></p>
 
     <% if user_signed_in? && current_user == @post.user %>
       <hr>

@@ -64,5 +64,6 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'webpacker', '~> 3.0'
 gem 'sidekiq', '~> 5.0'
 gem 'foreman', '~> 0.84.0'
+gem 'trix', '~> 0.11.0'
 
 ruby '2.4.1'
