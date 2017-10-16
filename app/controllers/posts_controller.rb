@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :verified_user?, only: [:new]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -10,7 +11,13 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if verified_user?
+      @post = Post.new
+    else
+      flash[:alert] = "You must be a verifed user to post articles here. If you \
+        feel you are receiving this alert in error, please contact support."
+      redirect_to posts_path
+    end
   end
 
   def create
@@ -60,5 +67,9 @@ class PostsController < ApplicationController
 
     def set_post
       @post = Post.find(params[:id])
+    end
+
+    def verified_user?
+      current_user.verified
     end
 end
