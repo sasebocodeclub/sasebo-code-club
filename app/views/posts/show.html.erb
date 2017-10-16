@@ -24,8 +24,16 @@
       </div>
     <% end %>
 
-    <% @post.comments.each do |comment| %>
-      <p><%= comment.body %></p>
+    <% @post.comments.reject(&:new_record?).each do |comment| %>
+      <div class="card">
+        <div class="card-body">
+          <p><%= comment.user.name %></p>
+          <p><%= comment.created_at.strftime('%b %d, %Y') %></p>
+          <%= comment.body %>
+        </div>
+      </div>
+      <br>
     <% end %>
-  </div>
-</div>
+
+  </div><!-- /.col-md-8 -->
+</div><!-- /.row -->
