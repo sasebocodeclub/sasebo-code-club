@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   end
 
   resources :announcements, only: [:index]
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
